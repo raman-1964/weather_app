@@ -1,0 +1,189 @@
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: rgb(36, 35, 35);
+}
+
+.main_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    margin: auto;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forsearch {
+    position: absolute;
+    width: 25vw;
+    background-color: whitesmoke;
+    padding-left: 0.5rem;
+}
+
+::placeholder {
+    color: black;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.forsearch,
+#btn {
+    border: none;
+    border-radius: 4px;
+    height: 2rem;
+}
+
+#btn {
+    width: 7vw;
+    position: relative;
+    left: 8.9rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(9, 211, 9);
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.card {
+    width: 33vw;
+    height: 40vh;
+    border-radius: 1rem;
+    display: grid;
+    background-color: whitesmoke;
+    place-items: center;
+    box-shadow: 2px 0px 2px 2px rgb(167, 158, 158);
+    margin-top: 2rem;
+}
+
+.fa_sun {
+    width: 3rem;
+    margin: auto;
+}
+
+.fa-sun {
+    margin-left: 1rem;
+    color: rgb(38, 38, 174);
+    margin-top: 0.9rem;
+    animation: sun_move 1.9s linear 0s infinite;
+}
+
+.card .info,
+.card .info .weather_info,
+.card .four_sec,
+.card .info .date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .info .weather_info {
+    height: 15vh;
+    width: 70%;
+    justify-content: flex-start;
+    color: whitesmoke;
+    background-color: black;
+}
+
+.card .info .weather_info .weather {
+    padding: 0.4rem;
+    margin-right: 1rem;
+    font-weight: lighter;
+    font-size: 2.4rem;
+}
+
+.card .info .weather_info .weather span {
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.card .info .weather_info .city h2 {
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.card .info .weather_info .city p {
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.card .info .date {
+    height: 15vh;
+    width: 30%;
+    flex-direction: column;
+    font-size: 1.42rem;
+    text-transform: capitalize;
+    background-color: rgb(70, 70, 212);
+    color: whitesmoke;
+    padding-left: 0.7rem;
+}
+
+.card .four_sec {
+    justify-content: space-between;
+    padding-right: 0.9rem;
+}
+
+.card .four_sec .two_sided {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    align-items: center;
+    color: #70c1b3;
+    font-size: 1.5rem;
+}
+
+.card .four_sec .two_sided .extra-info-leftside {
+    text-align: left;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #080705;
+    font-size: 15px;
+}
+
+@keyframes sun_move {
+    from {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(3);
+    }
+}
+
+@keyframes street_move {
+    0% {
+        transform: translateX(0rem);
+    }
+
+    50% {
+        transform: translateX(-0.4rem);
+    }
+
+    100% {
+        transform: translateX(0.4rem);
+    }
+}
